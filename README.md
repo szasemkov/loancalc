@@ -1,4 +1,4 @@
-[![Build status](https://github.com/szasemkov/loancalc/actions/workflows/workflow.yml/badge.svg?branch=master)](https://github.com/szasemkov/loancalc/actions/workflows/workflow.yml)
+[![Build status](https://github.com/szasemkov/loancalc/actions/workflows/workflow.yaml/badge.svg?branch=master)](https://github.com/szasemkov/loancalc/actions/workflows/workflow.yaml)
 
 ## Сервис расчета процентов кредитного договора
 Реализован сервис расчета процентов кредитного договора по входным параметрам: 
