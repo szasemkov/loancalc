@@ -16,10 +16,10 @@ jobs:
         uses: actions/setup-java@v4
         with:
           java-version: 17
-          distribution: 'temurin'
+          distribution: 'corretto'
 
       - name: Build
-        run: ./mvnw clean package
+        run: mvn clean package -DskipTests
 
       - name: Tests
         run: ./mvnw test
