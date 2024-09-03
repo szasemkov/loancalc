@@ -22,7 +22,7 @@ jobs:
         run: mvn clean package -DskipTests
 
       - name: Tests
-        run: ./mvnw test
+        run: mvn test
 
 
 
