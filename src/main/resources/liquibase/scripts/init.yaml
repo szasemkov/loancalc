@@ -1,0 +1,83 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: szasemkov
+      changes:
+        - createTable:
+            tableName: loans
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: amount
+                  type: REAL
+              - column:
+                  name: term
+                  type: INT
+              - column:
+                  name: interest_rate
+                  type: REAL
+              - column:
+                  name: loan_date
+                  type: DATE
+              - column:
+                  name: type_payment
+                  type: TEXT
+              - column:
+                  name: status
+                  type: TEXT
+  - changeSet:
+      id: 2
+      author: szasemkov
+      changes:
+        - createSequence:
+            sequenceName: loan_seq
+            startValue: 1
+  - changeSet:
+      id: 3
+      author: szasemkov
+      changes:
+        - createTable:
+            tableName: loans_payment
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: loan_id
+                  type: BIGINT
+              - column:
+                  name: number_payment
+                  type: INT
+              - column:
+                  name: date_payment
+                  type: DATE
+              - column:
+                  name: amount_payment
+                  type: FLOAT
+              - column:
+                  name: principal_debt
+                  type: FLOAT
+              - column:
+                  name: interest_debt
+                  type: FLOAT
+              - column:
+                  name: remaining_debt
+                  type: FLOAT
+              - column:
+                  name: description_payment
+                  type: TEXT
+  - changeSet:
+      id: 4
+      author: szasemkov
+      changes:
+        - createSequence:
+            sequenceName: loanpayment_seq
+            startValue: 1
